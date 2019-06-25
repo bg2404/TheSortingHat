@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'theSortingHat/style.css' %}"/>
+</head>
+<body  class="bg-img">
+
+{%  if form %}
+  <div>
+    <form role="" action="" method="post" enctype="multipart/form-data" class="container">
+      {% csrf_token %}
+      {% include 'theSortingHat/form_template.html' %}
+      <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-success">Submit</button>
+          </div>
+      </div>
+    </form>
+  </div>
+{% endif %}
+</body>
+</html>
